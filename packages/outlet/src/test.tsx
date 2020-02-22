@@ -1,11 +1,11 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Thing } from '../src';
+import Outlet from '.';
 
-describe('it', () => {
+describe('@microfrontend-react/outlet', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Thing />, div);
+    ReactDOM.render(<Outlet componentKey="test" />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

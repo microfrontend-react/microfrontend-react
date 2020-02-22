@@ -5,6 +5,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "module": "dist/core.esm.js",
   "files": [
     "dist"
   ],
@@ -29,7 +30,11 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "module": "dist/core.esm.js",
+  "jest": {
+    "testMatch": [
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ]
+  },
   "devDependencies": {
     "@types/jest": "^25.1.2",
     "@types/react": "^16.9.19",

@@ -1,11 +1,11 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Thing } from '../src';
+import Container from '.';
 
-describe('it', () => {
+describe('@microfrontend-react/container', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Thing />, div);
+    ReactDOM.render(<Container />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });
