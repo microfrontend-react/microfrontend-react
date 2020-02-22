@@ -1,10 +1,12 @@
 {
   "name": "microfrontend-react",
+  "author": "Steve Sims",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "start": "lerna run start --parallel",
     "build": "lerna run build",
-    "test": "lerna run test",
+    "test": "lerna run test -- ",
     "lint": "lerna run lint"
   },
   "devDependencies": {
@@ -12,5 +14,12 @@
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microfrontend-react/microfrontend-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/microfrontend-react/microfrontend-react/issues"
+  }
 }
