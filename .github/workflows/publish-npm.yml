@@ -35,6 +35,8 @@ jobs:
 
     - name: Publish packages to NPM
       run: |
+        git config --global user.email "noreply@github.com"
+        git config --global user.name "GitHub Actions (Publish)"
         yarn run publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
