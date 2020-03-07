@@ -1,7 +1,7 @@
 {
   "name": "@microfrontend-react/outlet",
   "author": "Steve Sims",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -37,7 +37,7 @@
     ]
   },
   "devDependencies": {
-    "@microfrontend-react/core": "^0.1.2",
+    "@microfrontend-react/core": "^0.1.4",
     "@types/jest": "^25.1.2",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
