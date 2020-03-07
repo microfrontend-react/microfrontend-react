@@ -32,11 +32,15 @@ jobs:
     - name: Build package
       run: |
         yarn && yarn build && yarn test
-
-    - name: Publish packages to NPM
+    
+    - name: Set up git
       run: |
         git config --global user.email "noreply@github.com"
         git config --global user.name "GitHub Actions (Publish)"
+        git remote set-url origin git@github.com:microfrontend-react/microfrontend-react.git
+
+    - name: Publish packages to NPM
+      run: |
         yarn run publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
