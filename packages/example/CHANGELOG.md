@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/microfrontend-react/microfrontend-react/compare/v0.1.1...v0.1.2) (2020-03-07)
+
+
+### Bug Fixes
+
+* set publishConfig for packages ([f4b1d1a](https://github.com/microfrontend-react/microfrontend-react/commit/f4b1d1afa20d7a659db6ca306239d99fa151bc56))
+
+
+
+
+
 ## 0.1.1 (2020-03-07)
 
 
