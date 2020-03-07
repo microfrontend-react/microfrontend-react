@@ -31,7 +31,7 @@ jobs:
   
     - name: Build package
       run: |
-        yarn && yarn test && yarn build
+        yarn && yarn build && yarn test
 
     - name: Publish packages to NPM
       run: |
