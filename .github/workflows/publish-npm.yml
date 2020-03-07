@@ -20,7 +20,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        persist-credentials: false
         fetch-depth: 2
 
     - name: Use Node 12
@@ -40,7 +39,6 @@ jobs:
       run: |
         git config --global user.email "noreply@github.com"
         git config --global user.name "GitHub Actions (Publish)"
-        git remote set-url origin git@github.com:microfrontend-react/microfrontend-react.git
 
     - name: Publish packages to NPM
       run: |
