@@ -17,6 +17,7 @@
     "prepare": "tsdx build"
   },
   "peerDependencies": {
+    "@microfrontend-react/core": "^0.1.2",
     "react": ">=16"
   },
   "husky": {
@@ -35,10 +36,8 @@
       "**/?(*.)+(spec|test).[jt]s?(x)"
     ]
   },
-  "dependencies": {
-    "@microfrontend-react/core": "^0.1.2"
-  },
   "devDependencies": {
+    "@microfrontend-react/core": "^0.1.2",
     "@types/jest": "^25.1.2",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
