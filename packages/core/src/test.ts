@@ -1,8 +1,8 @@
-import { components, register } from '.';
+import { registry, register } from '.';
 
 describe('@microfrontend-react/core', () => {
-  it('provides a components registry', () => {
-    expect(components).toBeTruthy();
+  it('provides a registry', () => {
+    expect(registry).toBeTruthy();
   });
 
   it('has a register function', () => {

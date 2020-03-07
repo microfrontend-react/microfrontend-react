@@ -1,11 +1,20 @@
 import * as React from 'react';
-import { components } from '@microfrontend-react/core';
+import { registry } from '@microfrontend-react/core';
 
-const Container: React.ComponentType = ({ children }) => (
+export interface ContainerProps {
+  children: React.ReactNode;
+  registryKey?: string;
+}
+
+const Container: React.FC<ContainerProps> = ({
+  children,
+  registryKey = 'context',
+  ...props
+}: ContainerProps) => (
   <>
-    {(components.context || []).reduce(
-      (output: React.ReactNode, Context: React.ComponentType) => (
-        <Context children={output} />
+    {(registry[registryKey] || []).reduce(
+      (output: React.ReactNode, Component: React.ComponentType) => (
+        <Component children={output} {...props} />
       ),
       children
     )}

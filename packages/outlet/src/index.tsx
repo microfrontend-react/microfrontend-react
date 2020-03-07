@@ -1,14 +1,17 @@
 import * as React from 'react';
 
-import { components } from '@microfrontend-react/core';
+import { registry } from '@microfrontend-react/core';
 
 export interface OutletProps {
-  componentKey: string;
+  registryKey: string;
 }
 
-const Outlet = ({ componentKey, ...props }: OutletProps) => (
+const Outlet: React.FC<OutletProps> = ({
+  registryKey,
+  ...props
+}: OutletProps) => (
   <>
-    {(components[componentKey] || []).map((Component, index) => (
+    {(registry[registryKey] || []).map((Component, index) => (
       <Component key={index} {...props} />
     ))}
   </>

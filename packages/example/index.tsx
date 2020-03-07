@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div>
       <Container>
-        <Outlet componentKey="thing" />
+        <Outlet registryKey="thing" />
       </Container>
     </div>
   );
