@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/microfrontend-react/microfrontend-react/compare/v0.1.2...v0.1.3) (2020-03-07)
+
+
+### Bug Fixes
+
+* core should be a peer dependency ([23458e3](https://github.com/microfrontend-react/microfrontend-react/commit/23458e381086f2773177a5a5417a34e28ac0612c))
+
+
+
+
+
 ## [0.1.2](https://github.com/microfrontend-react/microfrontend-react/compare/v0.1.1...v0.1.2) (2020-03-07)
 
 
