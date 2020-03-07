@@ -7,10 +7,20 @@
     "start": "lerna run start --parallel",
     "build": "lerna run build",
     "test": "lerna run test -- ",
-    "lint": "lerna run lint"
+    "lint": "lerna run lint",
+    "publish": "lerna publish --yes -m \"chore(release): publish [ci skip]\" --conventional-commits"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "husky": "^4.2.3",
     "lerna": "^3.20.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "workspaces": [
     "packages/*"
