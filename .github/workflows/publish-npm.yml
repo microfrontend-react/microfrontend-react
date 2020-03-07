@@ -1,0 +1,40 @@
+name: Publish packages to NPM
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    if: "! contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - run: echo "${{ github.event.head_commit.message }}"
+
+  publish-to-npm:
+    needs: prepare
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+        fetch-depth: 2
+
+    - name: Use Node 12
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+        registry-url: https://registry.npmjs.org
+  
+    - name: Build package
+      run: |
+        yarn && yarn test && yarn build
+
+    - name: Publish packages to NPM
+      run: |
+        yarn run publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
