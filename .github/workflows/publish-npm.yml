@@ -29,9 +29,12 @@ jobs:
         node-version: 12.x
         registry-url: https://registry.npmjs.org
   
+    - name: Initialise yarn
+      run: yarn && yarn lerna bootstrap
+
     - name: Build package
       run: |
-        yarn && yarn build && yarn test
+        yarn build
     
     - name: Set up git
       run: |
