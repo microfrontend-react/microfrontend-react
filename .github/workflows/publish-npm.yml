@@ -31,10 +31,6 @@ jobs:
     - name: Initialise yarn
       run: yarn && yarn lerna bootstrap
 
-    - name: Build package
-      run: |
-        yarn build
-    
     - name: Set up git
       run: |
         git config --global user.email "noreply@github.com"
