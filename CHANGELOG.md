@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/microfrontend-react/microfrontend-react/compare/v0.2.0...v0.2.1) (2020-03-12)
+
+
+### Bug Fixes
+
+* slightly more explicit outlet component type ([87245e3](https://github.com/microfrontend-react/microfrontend-react/commit/87245e3405fc86bf85b89c10b230c4323615f81c))
+
+
+
+
+
 # [0.2.0](https://github.com/microfrontend-react/microfrontend-react/compare/v0.1.4...v0.2.0) (2020-03-12)
 
 
