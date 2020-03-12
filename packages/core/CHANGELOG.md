@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/microfrontend-react/microfrontend-react/compare/v0.1.4...v0.2.0) (2020-03-12)
+
+
+### Features
+
+* add get and call functions to core ([640f58b](https://github.com/microfrontend-react/microfrontend-react/commit/640f58b95819813bd69a4743a4cfdbdfab1e85e5))
+
+
+
+
+
 ## 0.1.4 (2020-03-07)
 
 
