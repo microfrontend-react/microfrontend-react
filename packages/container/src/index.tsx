@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { registry } from '@microfrontend-react/core';
+import { get } from '@microfrontend-react/core';
 
 export interface ContainerProps {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ const Container: React.FC<ContainerProps> = ({
   ...props
 }: ContainerProps) => (
   <>
-    {(registry[registryKey] || []).reduce(
+    {get(registryKey).reduce(
       (output: React.ReactNode, Component: React.ComponentType) => (
         <Component children={output} {...props} />
       ),
