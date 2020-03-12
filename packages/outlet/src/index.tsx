@@ -11,7 +11,7 @@ const Outlet: React.FC<OutletProps> = ({
   ...props
 }: OutletProps) => (
   <>
-    {get(registryKey).map((Component, index) => (
+    {get(registryKey).map((Component: React.ComponentType, index) => (
       <Component key={index} {...props} />
     ))}
   </>
