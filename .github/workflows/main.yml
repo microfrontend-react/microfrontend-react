@@ -22,7 +22,7 @@ jobs:
             nodeModules-
 
       - name: Initialise yarn repo
-        run: yarn && yarn lerna bootstrap
+        run: yarn && yarn bootstrap
         env:
           CI: true
 

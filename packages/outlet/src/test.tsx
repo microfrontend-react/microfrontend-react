@@ -11,7 +11,7 @@ describe('@microfrontend-react/outlet', () => {
 
   it('renders nothing when the key is not matched to anything in the registry', () => {
     const { container } = render(
-      <Outlet registryKey="outlet-test-unknown-key">
+      <Outlet registryKey="outlet-unknown-key">
         Children should be ignored
       </Outlet>
     );
@@ -50,5 +50,21 @@ describe('@microfrontend-react/outlet', () => {
     const { getByTestId } = render(<Outlet registryKey={outerRegistryKey} />);
 
     expect(getByTestId('inner')).toBeDefined();
+  });
+
+  it('will pass thru random props', () => {
+    const registryKey = 'outlet-passthru';
+    const componentWithProps: React.FC<{ testFlag: boolean }> = ({
+      children,
+      testFlag,
+    }) => <div data-testid={testFlag ? 'has-flag' : 'no-flag'}>{children}</div>;
+
+    register(registryKey, componentWithProps);
+
+    const { getByTestId } = render(
+      <Outlet registryKey={registryKey} testFlag />
+    );
+
+    expect(getByTestId('has-flag')).toBeDefined();
   });
 });
