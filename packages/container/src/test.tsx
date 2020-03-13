@@ -79,4 +79,24 @@ describe('@microfrontend-react/container', () => {
     expect(getByTestId('container2')).toBeDefined();
     expect(renderContainer.children.length).toEqual(1);
   });
+
+  it('will pass thru random props', () => {
+    const childContent = 'Children should be rendered';
+    const registryKey = 'container-passthru';
+    const componentWithProps: React.FC<{ testFlag: boolean }> = ({
+      children,
+      testFlag,
+    }) => <div data-testid={testFlag ? 'has-flag' : 'no-flag'}>{children}</div>;
+
+    register(registryKey, componentWithProps);
+
+    const { getByTestId, getByText } = render(
+      <Container registryKey={registryKey} testFlag>
+        {childContent}
+      </Container>
+    );
+
+    expect(getByTestId('has-flag')).toBeDefined();
+    expect(getByText(childContent)).toBeDefined();
+  });
 });

@@ -1,9 +1,9 @@
 import * as React from 'react';
-
 import { get } from '@microfrontend-react/core';
 
 export interface OutletProps {
   registryKey: string;
+  [key: string]: any;
 }
 
 const Outlet: React.FC<OutletProps> = ({

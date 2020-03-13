@@ -4,6 +4,7 @@ import { get } from '@microfrontend-react/core';
 export interface ContainerProps {
   children: React.ReactNode;
   registryKey?: string;
+  [key: string]: any;
 }
 
 const Container: React.FC<ContainerProps> = ({
