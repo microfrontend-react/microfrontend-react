@@ -8,7 +8,7 @@ export interface ContainerProps {
 
 const Container: React.FC<ContainerProps> = ({
   children,
-  registryKey = 'context',
+  registryKey = 'containers',
   ...props
 }: ContainerProps) => (
   <>
