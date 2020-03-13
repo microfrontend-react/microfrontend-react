@@ -29,7 +29,10 @@ jobs:
         registry-url: https://registry.npmjs.org
   
     - name: Initialise yarn
-      run: yarn && yarn lerna bootstrap
+      run: |
+        yarn
+        yarn build
+        yarn bootstrap
 
     - name: Set up git
       run: |
@@ -38,6 +41,6 @@ jobs:
 
     - name: Publish packages to NPM
       run: |
-        yarn run publish
+        yarn publish-packages
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

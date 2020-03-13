@@ -4,11 +4,12 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "start": "lerna run start --parallel",
     "build": "lerna run build",
     "test": "lerna run test -- ",
     "lint": "lerna run lint",
-    "publish": "lerna publish --graph-type all --yes -m \"chore(release): publish [ci skip]\" --conventional-commits"
+    "publish-packages": "lerna publish --yes -m \"chore(release): publish [ci skip]\" --conventional-commits --no-git-reset --force-publish"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
