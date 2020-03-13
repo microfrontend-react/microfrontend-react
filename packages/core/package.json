@@ -1,7 +1,7 @@
 {
   "name": "@microfrontend-react/core",
   "author": "Steve Sims",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

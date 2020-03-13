@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/microfrontend-react/microfrontend-react/compare/v0.2.3...v0.2.4) (2020-03-13)
+
+
+### Bug Fixes
+
+* rest props now work on outlet and container ([31af68a](https://github.com/microfrontend-react/microfrontend-react/commit/31af68a34af0571207ae4453d4117bd4579fb7c2))
+
+
+
+
+
 ## [0.2.3](https://github.com/microfrontend-react/microfrontend-react/compare/v0.2.2...v0.2.3) (2020-03-13)
 
 
