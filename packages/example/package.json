@@ -1,6 +1,6 @@
 {
   "name": "@microfrontend-react/example",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "main": "index.js",
   "license": "MIT",
   "private": true,
@@ -9,9 +9,9 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@microfrontend-react/container": "^0.2.4",
-    "@microfrontend-react/core": "^0.2.4",
-    "@microfrontend-react/outlet": "^0.2.4",
+    "@microfrontend-react/container": "^0.3.0",
+    "@microfrontend-react/core": "^0.3.0",
+    "@microfrontend-react/outlet": "^0.3.0",
     "react": "^16.12.0",
     "react-app-polyfill": "^1.0.0",
     "react-dom": "^16.12.0"

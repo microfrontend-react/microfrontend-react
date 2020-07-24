@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2020-07-24)
+
+
+### Bug Fixes
+
+* refresh yarn.lock to fix build ([0013861](https://github.com/microfrontend-react/microfrontend-react/commit/00138614cbcf1f4358f3ca9c44e97484df6c511e))
+
+
+### Features
+
+* add unregister function to core ([62224dd](https://github.com/microfrontend-react/microfrontend-react/commit/62224dd59e1401891630909531b2d7ec516b6acf))
+
+
+
+
+
 ## [0.2.4](https://github.com/microfrontend-react/microfrontend-react/compare/v0.2.3...v0.2.4) (2020-03-13)
 
 

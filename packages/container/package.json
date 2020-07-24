@@ -1,7 +1,7 @@
 {
   "name": "@microfrontend-react/container",
   "author": "Steve Sims",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -37,7 +37,7 @@
     ]
   },
   "devDependencies": {
-    "@microfrontend-react/core": "^0.2.4",
+    "@microfrontend-react/core": "^0.3.0",
     "@testing-library/react": "^10.0.0",
     "@types/jest": "^25.1.2",
     "@types/react": "^16.9.19",
