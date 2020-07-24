@@ -1,4 +1,4 @@
-import { registry, register, get, call } from '.';
+import { registry, register, get, call, unregister } from '.';
 
 describe('@microfrontend-react/core', () => {
   it('provides a registry', () => {
@@ -28,6 +28,51 @@ describe('@microfrontend-react/core', () => {
       register(registryKey, testFn);
 
       expect(registry[registryKey]).toEqual([testFn]);
+    });
+  });
+
+  describe('unregister', () => {
+    it('removes items from the registry for a given key', () => {
+      const testFn = jest.fn();
+      const registryKey = 'unregister-test';
+
+      register(registryKey, testFn);
+      unregister(registryKey, testFn);
+
+      expect(registry[registryKey]).toEqual([]);
+    });
+
+    it('does nothing when the item is not registered', () => {
+      const testFn = jest.fn();
+      const registryKey = 'unregister-notregistered-test';
+
+      unregister(registryKey, testFn);
+
+      expect(registry[registryKey]).toBeUndefined();
+    });
+
+    it('only removes the given item from the registry for a given key', () => {
+      const testFn = jest.fn();
+      const otherTestFn = jest.fn();
+      const registryKey = 'unregister-only-test';
+
+      register(registryKey, testFn);
+      register(registryKey, otherTestFn);
+      unregister(registryKey, testFn);
+
+      expect(registry[registryKey]).toEqual([otherTestFn]);
+    });
+
+    it('tolerates/ignores multiple unregister requests', () => {
+      const testFn = jest.fn();
+      const registryKey = 'unregister-test';
+
+      register(registryKey, testFn);
+      unregister(registryKey, testFn);
+      unregister(registryKey, testFn);
+      unregister(registryKey, testFn);
+
+      expect(registry[registryKey]).toEqual([]);
     });
   });
 
